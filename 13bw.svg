@@ -1,21 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="2362" height="2362">
-  <title>600x600dpi Inverted High-Precision Print Vector Artwork (100mm x 100mm)</title>
-  <desc>Inverted Black and White | Resolution: 600 x 600 dpi at 100mm x 100mm (2362 x 2362 px)</desc>
+  <title>600x600dpi High-Precision Print Vector Artwork (Full Black Square)</title>
+  <desc>Resolution: 600 x 600 dpi at 100mm x 100mm (2362 x 2362 px)</desc>
 
-  <!-- 白い円の背景（断裁・フチなし印刷対応のため外周いっぱいまで配置） -->
-  <circle cx="200" cy="200" r="200" fill="#ffffff" />
+  <!-- 正方形全体の黒背景 -->
+  <rect x="0" y="0" width="400" height="400" fill="#000000" />
 
-  <!-- 1. 大きく曲がった太い眉（黒い塗り） -->
+  <!-- 1. 大きく曲がった太い眉（白い塗り） -->
   <path d="M 104,124 
            C 145,124 198,105 234,62 
            C 278,74 316,96 350,124 
            L 345,129 
            C 314,112 284,96 250,86 
            C 236,132 205,164 156,184 
-           C 134,182 114,174 104,124 Z" fill="#000000" />
+           C 134,182 114,174 104,124 Z" fill="#ffffff" />
 
   <!-- 2. 目のパーツ群（繊細な線幅と有機的なアーチ曲線） -->
-  <g fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round">
     <!-- 二重のライン（上まぶたの外側） -->
     <path d="M 188,166 C 226,154 264,150 301,152" stroke-width="2.6" />
     
@@ -33,11 +33,11 @@
     <path d="M 314,165 C 325,164 333,160 339,152" stroke-width="3.2" />
   </g>
 
-  <!-- 瞳（黒塗りの円） -->
-  <circle cx="260" cy="171" r="14.2" fill="#000000" />
+  <!-- 瞳（白抜きの円） -->
+  <circle cx="260" cy="171" r="14.2" fill="#ffffff" />
 
   <!-- 3. 左側の縦線・幾何学ライン群 -->
-  <g fill="none" stroke="#000000" stroke-linecap="round">
+  <g fill="none" stroke="#ffffff" stroke-linecap="round">
     <!-- 中央の長い垂直線 -->
     <path d="M 82,52 L 82,190" stroke-width="5.5" />
     
@@ -50,11 +50,11 @@
     <!-- 左下の途切れた縦カーブ（上部フック） -->
     <path d="M 67,198 C 75,200 79,205 80,212" stroke-width="5.5" />
     
-    <!-- 左下の長い曲線（円の外周へ向かう） -->
+    <!-- 左下の長い曲線（下部エッジへ向かう） -->
     <path d="M 79,224 C 72,265 69,310 68,354" stroke-width="6" />
   </g>
 
   <!-- 4. 目頭下の台形パーツと右下の斜線 -->
-  <path d="M 134,210 L 163,234 L 158,243 L 131,231 Z" fill="#000000" />
-  <path d="M 162,253 L 282,344" stroke="#000000" stroke-width="5.5" stroke-linecap="round" />
+  <path d="M 134,210 L 163,234 L 158,243 L 131,231 Z" fill="#ffffff" />
+  <path d="M 162,253 L 282,344" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" />
 </svg>

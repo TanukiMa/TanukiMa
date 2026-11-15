@@ -1,282 +1,346 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
   <defs>
-    <!-- 知的で落ち着いたクールトーンの背景グラデーション -->
+    <!-- 黒髪とのコントラストが明確で、知的かつ品格あるプラチナシルバー〜スチールブルーの背景グラデーション -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#c9d6e3" />
-      <stop offset="55%" stop-color="#e3eaf2" />
-      <stop offset="100%" stop-color="#cfd8e3" />
+      <stop offset="0%" stop-color="#9aa7b8" />
+      <stop offset="48%" stop-color="#c4cedb" />
+      <stop offset="100%" stop-color="#8b98aa" />
+    </linearGradient>
+
+    <!-- 人物背後に柔らかな光のハロー（後光）を作り、黒髪の輪郭・毛先を浮き立たせるグラデーション -->
+    <radialGradient id="bgHalo" cx="48%" cy="38%" r="52%">
+      <stop offset="0%" stop-color="#edf2f7" stop-opacity="0.92" />
+      <stop offset="55%" stop-color="#d2dbe6" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#8b98aa" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- 知的な空間を演出する建築的ライティング -->
+    <linearGradient id="bgLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
 
     <!-- 肌のグラデーション -->
     <linearGradient id="skinGrad" x1="20%" y1="10%" x2="85%" y2="90%">
-      <stop offset="0%" stop-color="#f7cbb0" />
-      <stop offset="60%" stop-color="#e6a985" />
-      <stop offset="100%" stop-color="#c98661" />
+      <stop offset="0%" stop-color="#f2c4a7" />
+      <stop offset="55%" stop-color="#dea07c" />
+      <stop offset="100%" stop-color="#bd7a55" />
+    </linearGradient>
+
+    <!-- 首の立体グラデーション -->
+    <linearGradient id="neckGrad" x1="15%" y1="0%" x2="90%" y2="20%">
+      <stop offset="0%" stop-color="#eab394" />
+      <stop offset="60%" stop-color="#d4936e" />
+      <stop offset="100%" stop-color="#ab6944" />
     </linearGradient>
 
     <!-- 黒髪のベースグラデーション -->
     <linearGradient id="hairBaseGrad" x1="15%" y1="0%" x2="85%" y2="100%">
-      <stop offset="0%" stop-color="#3c4047" />
-      <stop offset="45%" stop-color="#1e2024" />
-      <stop offset="100%" stop-color="#0d0e10" />
+      <stop offset="0%" stop-color="#353940" />
+      <stop offset="45%" stop-color="#17191c" />
+      <stop offset="100%" stop-color="#08090a" />
     </linearGradient>
 
     <!-- サラサラ毛束用のハイライトグラデーション -->
     <linearGradient id="hairSheenGrad" x1="0%" y1="0%" x2="100%" y2="60%">
-      <stop offset="0%" stop-color="#69707d" stop-opacity="0.85" />
-      <stop offset="50%" stop-color="#484d57" stop-opacity="0.6" />
+      <stop offset="0%" stop-color="#7a8291" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#4e5461" stop-opacity="0.6" />
       <stop offset="100%" stop-color="#1c1e22" stop-opacity="0.1" />
     </linearGradient>
 
-    <!-- フェラーリレッド（Rosso Corsa）のグラデーション -->
-    <linearGradient id="ferrariRedMain" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff2424" />
-      <stop offset="50%" stop-color="#d40000" />
-      <stop offset="100%" stop-color="#8a0000" />
+    <!-- 気品と威厳あるフェラーリレッドのテーラードジャケット -->
+    <linearGradient id="ferrariTailoredMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e61919" />
+      <stop offset="50%" stop-color="#b80000" />
+      <stop offset="100%" stop-color="#6e0000" />
     </linearGradient>
 
-    <linearGradient id="ferrariRedShadow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#b80000" />
-      <stop offset="100%" stop-color="#630000" />
+    <linearGradient id="ferrariTailoredLapel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2e2e" />
+      <stop offset="60%" stop-color="#c70000" />
+      <stop offset="100%" stop-color="#800000" />
     </linearGradient>
 
-    <linearGradient id="ferrariRedHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff4747" />
-      <stop offset="60%" stop-color="#d40000" />
-      <stop offset="100%" stop-color="#9e0000" />
+    <!-- 知的で清潔感のあるインナー -->
+    <linearGradient id="innerSuitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22252a" />
+      <stop offset="100%" stop-color="#0d0e11" />
     </linearGradient>
 
-    <!-- 濃く重厚なダークスモークブラウンのレンズグラデーション -->
+    <!-- 濃く重厚なダークスモークレンズ（奥の大きな瞳と鋭い目つきが自然に透ける濃度） -->
     <linearGradient id="lensGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0d0805" stop-opacity="0.96" />
-      <stop offset="55%" stop-color="#29160c" stop-opacity="0.91" />
-      <stop offset="100%" stop-color="#54301b" stop-opacity="0.86" />
+      <stop offset="0%" stop-color="#0a0604" stop-opacity="0.96" />
+      <stop offset="55%" stop-color="#221209" stop-opacity="0.92" />
+      <stop offset="100%" stop-color="#452614" stop-opacity="0.88" />
     </linearGradient>
 
-    <!-- 細身で知的なプラチナ・シルバーフレーム -->
-    <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f0f2f5" />
-      <stop offset="50%" stop-color="#8e959e" />
+    <!-- 縁無しサングラス用：レンズ断面の繊細な光沢 -->
+    <linearGradient id="lensEdgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7" />
+      <stop offset="40%" stop-color="#b89882" stop-opacity="0.35" />
+      <stop offset="75%" stop-color="#3b2214" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#e8dcd3" stop-opacity="0.65" />
+    </linearGradient>
+
+    <!-- リムレス用プラチナ・金具パーツ -->
+    <linearGradient id="hardwareGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d8dde6" />
+      <stop offset="50%" stop-color="#8b929c" />
       <stop offset="100%" stop-color="#ffffff" />
     </linearGradient>
+
+    <!-- 左目・右目の白目〜黒目クリッピング用（三白眼にならない大きな黒目を上下まぶたでシャープに挟み込む） -->
+    <clipPath id="leftEyeClip">
+      <path d="M 101,192 C 116,184 137,185 153,194 C 138,202 117,202 101,192 Z" />
+    </clipPath>
+    <clipPath id="rightEyeClip">
+      <path d="M 196,195 C 213,186 234,186 250,194 C 235,202 213,203 196,195 Z" />
+    </clipPath>
   </defs>
 
-  <!-- 背景 -->
+  <!-- 背景（黒髪との境界がくっきり映えるプラチナシルバー〜スチールグレーの知的空間） -->
   <rect width="400" height="400" fill="url(#bgGrad)" />
-  <path d="M 310,0 C 330,130 300,260 270,400 L 400,400 L 400,0 Z" fill="#9fb0c4" opacity="0.22" />
-  <path d="M 0,0 L 140,0 C 90,120 45,250 0,360 Z" fill="#ffffff" opacity="0.28" />
+  <circle cx="195" cy="150" r="190" fill="url(#bgHalo)" />
+  <path d="M 0,0 L 235,0 L 115,400 L 0,400 Z" fill="url(#bgLight)" />
+  <path d="M 295,0 L 400,0 L 400,400 L 235,400 Z" fill="#68768a" opacity="0.22" />
 
-  <!-- 首 -->
-  <path d="M 106,295 C 106,330 98,365 88,400 L 282,400 C 272,365 265,330 262,295 Z" fill="#d99771" />
-  <path d="M 108,310 C 146,355 214,360 258,305 C 243,355 190,385 112,360 Z" fill="#b87651" opacity="0.6" />
+  <!-- スラッと長く引き締まった首 -->
+  <path d="M 122,265 
+           C 122,302 118,342 106,385 
+           L 252,385 
+           C 242,342 239,298 239,262 Z" fill="url(#neckGrad)" />
+  <path d="M 123,286 C 154,322 204,324 238,274 C 228,318 184,344 123,322 Z" fill="#9c5a37" opacity="0.62" />
+  <path d="M 136,312 C 138,334 143,354 152,372" fill="none" stroke="#b5704a" stroke-width="2" stroke-linecap="round" opacity="0.45" />
+  <path d="M 222,298 C 216,326 206,352 194,374" fill="none" stroke="#9e5b37" stroke-width="2.2" stroke-linecap="round" opacity="0.45" />
 
-  <!-- フェラーリレッドのウェア・ストール -->
-  <path d="M 75,345 C 62,365 50,385 38,400 L 128,400 C 112,375 95,350 95,335 C 88,335 80,340 75,345 Z" fill="url(#ferrariRedMain)" />
-  <path d="M 76,348 C 84,365 92,382 100,400" fill="none" stroke="#ff6666" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
-  <path d="M 278,312 C 296,326 308,356 285,400 L 192,400 C 234,365 260,335 278,312 Z" fill="url(#ferrariRedShadow)" />
-  <path d="M 268,318 C 282,335 275,365 240,400 L 212,400 C 246,365 262,340 268,318 Z" fill="url(#ferrariRedHighlight)" />
-  <path d="M 266,322 C 276,338 268,366 236,400" fill="none" stroke="#ff7070" stroke-width="1.5" stroke-linecap="round" opacity="0.65" />
-  <path d="M 288,356 C 302,370 312,386 320,400 L 248,400 C 266,385 280,370 288,356 Z" fill="url(#ferrariRedMain)" />
-  <path d="M 288,358 C 278,372 265,386 250,400" fill="none" stroke="#ff5c5c" stroke-width="1.5" stroke-linecap="round" opacity="0.8" />
+  <!-- チャコールのインナー＋フェラーリレッドのテーラードジャケット -->
+  <path d="M 96,362 C 134,386 212,386 264,358 L 280,400 L 82,400 Z" fill="url(#innerSuitGrad)" />
+  <path d="M 102,368 C 138,390 208,390 258,364" fill="none" stroke="#3d434d" stroke-width="1.5" stroke-linecap="round" opacity="0.75" />
 
-  <!-- 襟足の後ろ髪 -->
-  <path d="M 300,268 C 302,282 296,298 284,308 C 288,295 290,282 290,272 Z" fill="#181a1d" />
-  <path d="M 294,274 C 295,288 288,302 278,310" fill="none" stroke="#363a42" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M 18,400 C 28,374 58,358 98,356 L 132,400 Z" fill="url(#ferrariTailoredMain)" />
+  <path d="M 98,356 C 110,370 122,386 134,400 L 114,400 C 103,386 94,372 88,359 Z" fill="url(#ferrariTailoredLapel)" />
+  <path d="M 98,356 L 134,400" fill="none" stroke="#ff6b6b" stroke-width="1.2" opacity="0.75" />
 
-  <!-- 耳（向かって右） -->
-  <path d="M 292,208 C 315,200 328,222 320,252 C 313,276 297,285 284,276 Z" fill="#e6a682" />
-  <path d="M 296,218 C 309,214 315,228 309,248 C 305,262 296,266 290,260" fill="none" stroke="#bd7b57" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 366,400 C 352,370 318,352 262,354 L 222,400 Z" fill="url(#ferrariTailoredMain)" />
+  <path d="M 262,354 C 246,368 230,384 214,400 L 238,400 C 252,385 264,370 274,356 Z" fill="url(#ferrariTailoredLapel)" />
+  <path d="M 262,354 L 214,400" fill="none" stroke="#ff6b6b" stroke-width="1.2" opacity="0.75" />
 
-  <!-- 知的で引き締まった精悍な顔の輪郭 -->
-  <path d="M 85,135 
-           C 78,185 81,244 95,286 
-           C 109,328 142,356 180,356 
-           C 221,356 260,322 280,274 
-           C 299,226 306,174 295,125 
-           C 281,72 230,52 178,56 
-           C 125,60 93,90 85,135 Z" fill="url(#skinGrad)" />
+  <!-- 頭部全体（スラッとした首筋を引き立てるバランス配置） -->
+  <g transform="translate(0, -14)">
+    <!-- 襟足の後ろ髪 -->
+    <path d="M 296,262 C 297,274 291,286 281,294 C 285,284 287,274 287,266 Z" fill="#141619" />
+    <path d="M 291,268 C 292,278 286,288 278,295" fill="none" stroke="#363a42" stroke-width="1.4" stroke-linecap="round" />
 
-  <!-- 知的で立体的な陰影 -->
-  <path d="M 254,196 C 268,226 262,274 231,314 C 212,337 186,348 164,348 C 202,348 246,321 268,274 C 285,239 285,205 254,196 Z" fill="#c78058" opacity="0.5" />
-  <path d="M 248,236 C 238,256 226,274 214,288 C 232,278 248,260 256,240 Z" fill="#c78058" opacity="0.28" />
-  <path d="M 110,105 C 145,92 215,92 252,110 C 235,135 135,135 110,105 Z" fill="#ffe6d6" opacity="0.45" />
+    <!-- 耳（向かって右） -->
+    <path d="M 292,208 C 315,200 328,222 320,252 C 313,276 297,285 284,276 Z" fill="#e0a07c" />
+    <path d="M 296,218 C 309,214 315,228 309,248 C 305,262 296,266 290,260" fill="none" stroke="#b3714d" stroke-width="2.5" stroke-linecap="round" />
 
-  <!-- 髪の毛ベース -->
-  <path d="M 79,228 
-           C 73,188 69,142 79,102 
-           C 89,65 118,36 156,24 
-           C 194,12 242,18 282,42 
-           C 318,64 338,104 338,148 
-           C 338,186 326,224 308,252 
-           C 306,232 304,216 298,206 
-           C 293,218 290,236 286,256 
-           C 288,214 287,172 278,136 
-           C 272,114 264,104 256,96 
-           C 246,102 238,94 226,90 
-           C 214,95 204,88 190,87 
-           C 178,93 166,87 152,88 
-           C 138,94 128,90 116,96 
-           C 104,106 96,122 90,146 
-           C 84,174 84,204 83,235 Z" fill="url(#hairBaseGrad)" />
+    <!-- 威厳と知性を湛えた彫りの深い輪郭 -->
+    <path d="M 85,135 
+             C 78,185 82,242 97,284 
+             C 111,325 142,352 179,352 
+             C 219,352 257,319 278,272 
+             C 298,225 306,174 295,125 
+             C 281,72 230,52 178,56 
+             C 125,60 93,90 85,135 Z" fill="url(#skinGrad)" />
 
-  <!-- トップの立ち上がりとツンツンした毛先のベジェ曲線 -->
-  <g fill="#1c1e22">
-    <path d="M 142,29 C 154,18 168,11 182,9 C 174,17 166,24 158,28 Z" />
-    <path d="M 164,23 C 178,13 194,8 208,10 C 198,16 188,21 178,24 Z" />
-    <path d="M 188,20 C 204,13 220,12 234,16 C 222,19 210,22 198,23 Z" />
-    <path d="M 214,23 C 232,18 248,20 262,27 C 248,27 235,27 222,27 Z" />
-    <path d="M 244,31 C 262,28 278,32 292,40 C 278,39 264,38 252,36 Z" />
-    <path d="M 272,44 C 290,44 305,50 316,60 C 302,57 288,53 276,50 Z" />
-    <path d="M 296,62 C 314,66 326,76 334,88 C 322,82 310,75 298,70 Z" />
-    <path d="M 318,90 C 334,98 342,110 346,124 C 336,115 326,106 318,98 Z" />
-    <path d="M 328,122 C 340,132 344,146 344,160 C 336,150 330,138 326,128 Z" />
-  </g>
+    <!-- 端正で立体的な陰影 -->
+    <path d="M 253,196 C 266,226 260,272 229,311 C 210,334 185,345 163,345 C 201,345 244,318 266,272 C 284,238 284,205 253,196 Z" fill="#bd7650" opacity="0.52" />
+    <path d="M 248,236 C 238,256 226,274 214,288 C 232,278 248,260 256,240 Z" fill="#bd7650" opacity="0.3" />
+    <path d="M 110,105 C 145,92 215,92 252,110 C 235,135 135,135 110,105 Z" fill="#ffe6d6" opacity="0.4" />
 
-  <!-- 前髪〜トップへ斜め右後ろへ流れるサラサラの毛束（陰影レイヤー） -->
-  <g fill="none" stroke="#0b0c0e" stroke-linecap="round">
-    <path d="M 102,94 C 134,74 176,68 224,76" stroke-width="2.5" />
-    <path d="M 96,110 C 122,86 164,78 212,84" stroke-width="2" />
-    <path d="M 114,76 C 152,54 202,50 254,66" stroke-width="2.8" />
-    <path d="M 132,56 C 174,34 226,34 276,54" stroke-width="2.6" />
-    <path d="M 154,38 C 196,20 246,24 292,46" stroke-width="2.4" />
-    <path d="M 266,86 C 288,112 298,148 296,192" stroke-width="2.4" />
-    <path d="M 284,74 C 308,104 318,146 314,196" stroke-width="2.2" />
-    <path d="M 302,68 C 324,102 332,148 324,204" stroke-width="2" />
-  </g>
+    <!-- サラサラの黒髪ベース -->
+    <path d="M 79,228 
+             C 73,188 69,142 79,102 
+             C 89,65 118,36 156,24 
+             C 194,12 242,18 282,42 
+             C 318,64 338,104 338,148 
+             C 338,186 326,224 308,252 
+             C 306,232 304,216 298,206 
+             C 293,218 290,236 286,256 
+             C 288,214 287,172 278,136 
+             C 272,114 264,104 256,96 
+             C 246,102 238,94 226,90 
+             C 214,95 204,88 190,87 
+             C 178,93 166,87 152,88 
+             C 138,94 128,90 116,96 
+             C 104,106 96,122 90,146 
+             C 84,174 84,204 83,235 Z" fill="url(#hairBaseGrad)" />
 
-  <!-- 光を受けて輝くサラサラの細い毛束・ハイライトストローク -->
-  <g fill="none" stroke-linecap="round">
-    <path d="M 108,86 C 142,64 188,58 238,70" stroke="url(#hairSheenGrad)" stroke-width="2.2" />
-    <path d="M 118,70 C 156,48 206,44 258,60" stroke="#78808f" stroke-width="1.6" opacity="0.75" />
-    <path d="M 128,60 C 168,38 218,36 268,54" stroke="#9aa3b2" stroke-width="1.1" opacity="0.65" />
-    <path d="M 140,48 C 180,28 230,28 278,48" stroke="#858e9e" stroke-width="1.4" opacity="0.7" />
-    <path d="M 158,32 C 196,16 242,20 284,40" stroke="#9aa3b2" stroke-width="1.1" opacity="0.6" />
-    <path d="M 176,22 C 208,12 246,16 278,32" stroke="#78808f" stroke-width="1.2" opacity="0.65" />
-
-    <path d="M 100,102 C 128,80 168,74 214,80" stroke="#646b78" stroke-width="1.5" opacity="0.7" />
-    <path d="M 122,92 C 148,78 184,74 222,82" stroke="#858e9e" stroke-width="1" opacity="0.55" />
-    <path d="M 148,86 C 174,78 204,78 234,86" stroke="#646b78" stroke-width="1.2" opacity="0.65" />
-
-    <path d="M 252,78 C 280,104 292,142 292,188" stroke="#6d7582" stroke-width="1.6" opacity="0.7" />
-    <path d="M 268,68 C 296,98 308,140 304,192" stroke="#8d96a6" stroke-width="1.2" opacity="0.6" />
-    <path d="M 282,62 C 310,94 322,138 316,198" stroke="#6d7582" stroke-width="1.5" opacity="0.65" />
-    <path d="M 296,64 C 322,98 330,144 322,206" stroke="#8d96a6" stroke-width="1.1" opacity="0.55" />
-    <path d="M 310,78 C 330,112 336,154 326,214" stroke="#5c6370" stroke-width="1.3" opacity="0.6" />
-
-    <path d="M 96,96 C 84,128 80,166 80,208" stroke="#6d7582" stroke-width="1.5" opacity="0.7" />
-    <path d="M 88,108 C 76,140 74,178 76,218" stroke="#8d96a6" stroke-width="1.1" opacity="0.6" />
-    <path d="M 102,112 C 90,142 86,176 85,212" stroke="#5c6370" stroke-width="1.3" opacity="0.65" />
-  </g>
-
-  <!-- もみあげ -->
-  <path d="M 283,218 C 291,234 291,256 282,274 C 279,262 280,240 283,218 Z" fill="#18191c" />
-  <path d="M 286,224 C 292,240 291,258 285,272" fill="none" stroke="#4a5059" stroke-width="1" stroke-linecap="round" />
-  <path d="M 81,208 C 77,226 79,244 85,256 C 86,240 85,222 81,208 Z" fill="#18191c" />
-  <path d="M 79,214 C 77,230 79,244 83,254" fill="none" stroke="#4a5059" stroke-width="1" stroke-linecap="round" />
-
-  <!-- シャープでスッと通った鼻と人中 -->
-  <path d="M 173,174 C 172,196 170,218 169,236" fill="none" stroke="#fff0e6" stroke-width="3.2" stroke-linecap="round" opacity="0.8" />
-  <path d="M 178,176 C 179,196 181,215 184,230" fill="none" stroke="#c9845d" stroke-width="2" stroke-linecap="round" opacity="0.65" />
-  <path d="M 157,232 C 151,236 152,243 160,244 C 165,245 169,246 173,246 C 177,246 181,245 186,244 C 193,243 194,235 187,230" fill="none" stroke="#b56e48" stroke-width="2.1" stroke-linecap="round" />
-  <path d="M 159,240 C 162,238 166,239 168,242 C 165,243 161,243 159,240 Z" fill="#633219" />
-  <path d="M 177,242 C 180,239 184,238 186,240 C 184,243 180,243 177,242 Z" fill="#633219" />
-  <path d="M 167,252 C 167,259 166,265 165,270 M 177,252 C 177,259 178,265 179,270" fill="none" stroke="#cf8a63" stroke-width="1.6" stroke-linecap="round" opacity="0.6" />
-
-  <!-- 引き締まった口元 -->
-  <path d="M 129,277 C 145,274 162,272 172,275 C 182,273 198,276 211,279 C 195,283 182,284 172,282 C 158,283 142,281 129,277 Z" fill="#c97167" />
-  <path d="M 127,276 C 148,281 165,282 173,282 C 182,282 199,281 214,278" fill="none" stroke="#853c34" stroke-width="1.9" stroke-linecap="round" />
-  <path d="M 135,280 C 152,292 188,293 204,280 C 188,285 152,285 135,280 Z" fill="#de867b" />
-  <path d="M 153,286 C 165,289 178,289 187,286" fill="none" stroke="#f7b7af" stroke-width="1.8" stroke-linecap="round" />
-
-  <!-- 顎髭（原画の形状・鼻下なし・黒ベース＋サラサラの繊細な毛束感） -->
-  <path d="M 117,286 
-           C 115,308 119,328 135,338 
-           C 154,347 187,347 205,336 
-           C 217,326 221,306 219,288 
-           C 213,305 207,318 191,320 
-           C 175,322 152,320 137,316 
-           C 125,312 121,298 117,286 Z" fill="#232529" opacity="0.88" />
-  <path d="M 152,297 C 164,303 180,303 190,297 C 184,307 160,307 152,297 Z" fill="#232529" opacity="0.88" />
-
-  <!-- 顎髭のサラサラとした細い毛流れ・ハイライトストローク -->
-  <g fill="none" stroke-linecap="round">
-    <g stroke="#0e0f12" stroke-width="1.3" opacity="0.85">
-      <path d="M 122,304 C 123,316 126,326 131,333" />
-      <path d="M 132,316 C 134,326 137,334 141,339" />
-      <path d="M 144,319 C 145,329 147,337 150,342" />
-      <path d="M 156,321 C 157,331 158,339 159,344" />
-      <path d="M 169,322 C 169,332 169,340 169,345" />
-      <path d="M 182,321 C 181,331 180,339 179,344" />
-      <path d="M 194,319 C 192,329 190,337 187,342" />
-      <path d="M 205,314 C 202,324 199,332 195,338" />
-      <path d="M 215,302 C 213,314 210,324 205,332" />
+    <!-- 整えられた立体的なトップの毛先 -->
+    <g fill="#17191c">
+      <path d="M 142,29 C 154,18 168,11 182,9 C 174,17 166,24 158,28 Z" />
+      <path d="M 164,23 C 178,13 194,8 208,10 C 198,16 188,21 178,24 Z" />
+      <path d="M 188,20 C 204,13 220,12 234,16 C 222,19 210,22 198,23 Z" />
+      <path d="M 214,23 C 232,18 248,20 262,27 C 248,27 235,27 222,27 Z" />
+      <path d="M 244,31 C 262,28 278,32 292,40 C 278,39 264,38 252,36 Z" />
+      <path d="M 272,44 C 290,44 305,50 316,60 C 302,57 288,53 276,50 Z" />
+      <path d="M 296,62 C 314,66 326,76 334,88 C 322,82 310,75 298,70 Z" />
+      <path d="M 318,90 C 334,98 342,110 346,124 C 336,115 326,106 318,98 Z" />
+      <path d="M 328,122 C 340,132 344,146 344,160 C 336,150 330,138 326,128 Z" />
     </g>
-    <g stroke="#5c626e" stroke-width="1.1" opacity="0.8">
-      <path d="M 126,314 C 128,323 131,330 135,335" />
-      <path d="M 138,319 C 140,328 142,335 145,340" />
-      <path d="M 150,321 C 151,331 152,338 154,343" />
-      <path d="M 163,322 C 163,332 163,339 163,344" />
-      <path d="M 176,322 C 175,332 174,339 173,344" />
-      <path d="M 188,320 C 186,330 184,337 182,342" />
-      <path d="M 199,317 C 196,326 193,333 190,338" />
-      <path d="M 161,300 C 163,303 166,305 169,306" />
-      <path d="M 178,300 C 176,303 174,305 172,306" />
+
+    <!-- サラサラの毛束（陰影レイヤー） -->
+    <g fill="none" stroke="#08090a" stroke-linecap="round">
+      <path d="M 102,94 C 134,74 176,68 224,76" stroke-width="2.5" />
+      <path d="M 96,110 C 122,86 164,78 212,84" stroke-width="2" />
+      <path d="M 114,76 C 152,54 202,50 254,66" stroke-width="2.8" />
+      <path d="M 132,56 C 174,34 226,34 276,54" stroke-width="2.6" />
+      <path d="M 154,38 C 196,20 246,24 292,46" stroke-width="2.4" />
+      <path d="M 266,86 C 288,112 298,148 296,192" stroke-width="2.4" />
+      <path d="M 284,74 C 308,104 318,146 314,196" stroke-width="2.2" />
+      <path d="M 302,68 C 324,102 332,148 324,204" stroke-width="2" />
     </g>
+
+    <!-- サラサラの細い毛束・ハイライトストローク -->
+    <g fill="none" stroke-linecap="round">
+      <path d="M 108,86 C 142,64 188,58 238,70" stroke="url(#hairSheenGrad)" stroke-width="2.2" />
+      <path d="M 118,70 C 156,48 206,44 258,60" stroke="#78808f" stroke-width="1.6" opacity="0.75" />
+      <path d="M 128,60 C 168,38 218,36 268,54" stroke="#9aa3b2" stroke-width="1.1" opacity="0.65" />
+      <path d="M 140,48 C 180,28 230,28 278,48" stroke="#858e9e" stroke-width="1.4" opacity="0.7" />
+      <path d="M 158,32 C 196,16 242,20 284,40" stroke="#9aa3b2" stroke-width="1.1" opacity="0.6" />
+      <path d="M 176,22 C 208,12 246,16 278,32" stroke="#78808f" stroke-width="1.2" opacity="0.65" />
+
+      <path d="M 100,102 C 128,80 168,74 214,80" stroke="#646b78" stroke-width="1.5" opacity="0.7" />
+      <path d="M 122,92 C 148,78 184,74 222,82" stroke="#858e9e" stroke-width="1" opacity="0.55" />
+      <path d="M 148,86 C 174,78 204,78 234,86" stroke="#646b78" stroke-width="1.2" opacity="0.65" />
+
+      <path d="M 252,78 C 280,104 292,142 292,188" stroke="#6d7582" stroke-width="1.6" opacity="0.7" />
+      <path d="M 268,68 C 296,98 308,140 304,192" stroke="#8d96a6" stroke-width="1.2" opacity="0.6" />
+      <path d="M 282,62 C 310,94 322,138 316,198" stroke="#6d7582" stroke-width="1.5" opacity="0.65" />
+      <path d="M 296,64 C 322,98 330,144 322,206" stroke="#8d96a6" stroke-width="1.1" opacity="0.55" />
+      <path d="M 310,78 C 330,112 336,154 326,214" stroke="#5c6370" stroke-width="1.3" opacity="0.6" />
+
+      <path d="M 96,96 C 84,128 80,166 80,208" stroke="#6d7582" stroke-width="1.5" opacity="0.7" />
+      <path d="M 88,108 C 76,140 74,178 76,218" stroke="#8d96a6" stroke-width="1.1" opacity="0.6" />
+      <path d="M 102,112 C 90,142 86,176 85,212" stroke="#5c6370" stroke-width="1.3" opacity="0.65" />
+    </g>
+
+    <!-- もみあげ -->
+    <path d="M 283,218 C 291,234 291,256 282,274 C 279,262 280,240 283,218 Z" fill="#141619" />
+    <path d="M 286,224 C 292,240 291,258 285,272" fill="none" stroke="#4a5059" stroke-width="1" stroke-linecap="round" />
+    <path d="M 81,208 C 77,226 79,244 85,256 C 86,240 85,222 81,208 Z" fill="#141619" />
+    <path d="M 79,214 C 77,230 79,244 83,254" fill="none" stroke="#4a5059" stroke-width="1" stroke-linecap="round" />
+
+    <!-- シャープで端正な鼻と人中 -->
+    <path d="M 173,174 C 172,196 170,218 169,236" fill="none" stroke="#fff0e6" stroke-width="3.2" stroke-linecap="round" opacity="0.8" />
+    <path d="M 178,176 C 179,196 181,215 184,230" fill="none" stroke="#c27c55" stroke-width="2" stroke-linecap="round" opacity="0.65" />
+    <path d="M 157,232 C 151,236 152,243 160,244 C 165,245 169,246 173,246 C 177,246 181,245 186,244 C 193,243 194,235 187,230" fill="none" stroke="#ad6640" stroke-width="2.1" stroke-linecap="round" />
+    <path d="M 159,240 C 162,238 166,239 168,242 C 165,243 161,243 159,240 Z" fill="#5e2e16" />
+    <path d="M 177,242 C 180,239 184,238 186,240 C 184,243 180,243 177,242 Z" fill="#5e2e16" />
+    <path d="M 167,252 C 167,259 166,265 165,270 M 177,252 C 177,259 178,265 179,270" fill="none" stroke="#c9845d" stroke-width="1.6" stroke-linecap="round" opacity="0.6" />
+
+    <!-- 威厳と知的な余裕を湛えた口元 -->
+    <path d="M 129,277 C 145,274 162,272 172,275 C 182,273 198,276 211,278 C 195,282 182,283 172,281 C 158,282 142,280 129,277 Z" fill="#c26b61" />
+    <path d="M 126,276 C 148,280 165,281 173,281 C 182,281 200,280 215,277" fill="none" stroke="#7a342c" stroke-width="1.9" stroke-linecap="round" />
+    <path d="M 135,280 C 152,291 188,292 204,279 C 188,284 152,284 135,280 Z" fill="#d98177" />
+    <path d="M 153,286 C 165,289 178,289 187,286" fill="none" stroke="#f5b3ab" stroke-width="1.8" stroke-linecap="round" />
+
+    <!-- 顎髭（原画の形状・鼻下なし・黒ベース＋サラサラの繊細な毛束感） -->
+    <path d="M 117,286 
+             C 115,308 119,328 135,338 
+             C 154,347 187,347 205,336 
+             C 217,326 221,306 219,288 
+             C 213,305 207,318 191,320 
+             C 175,322 152,320 137,316 
+             C 125,312 121,298 117,286 Z" fill="#1e2024" opacity="0.9" />
+    <path d="M 152,297 C 164,303 180,303 190,297 C 184,307 160,307 152,297 Z" fill="#1e2024" opacity="0.9" />
+
+    <!-- 顎髭のサラサラとした細い毛流れ・ハイライトストローク -->
+    <g fill="none" stroke-linecap="round">
+      <g stroke="#0a0b0d" stroke-width="1.3" opacity="0.85">
+        <path d="M 122,304 C 123,316 126,326 131,333" />
+        <path d="M 132,316 C 134,326 137,334 141,339" />
+        <path d="M 144,319 C 145,329 147,337 150,342" />
+        <path d="M 156,321 C 157,331 158,339 159,344" />
+        <path d="M 169,322 C 169,332 169,340 169,345" />
+        <path d="M 182,321 C 181,331 180,339 179,344" />
+        <path d="M 194,319 C 192,329 190,337 187,342" />
+        <path d="M 205,314 C 202,324 199,332 195,338" />
+        <path d="M 215,302 C 213,314 210,324 205,332" />
+      </g>
+      <g stroke="#5c626e" stroke-width="1.1" opacity="0.8">
+        <path d="M 126,314 C 128,323 131,330 135,335" />
+        <path d="M 138,319 C 140,328 142,335 145,340" />
+        <path d="M 150,321 C 151,331 152,338 154,343" />
+        <path d="M 163,322 C 163,332 163,339 163,344" />
+        <path d="M 176,322 C 175,332 174,339 173,344" />
+        <path d="M 188,320 C 186,330 184,337 182,342" />
+        <path d="M 199,317 C 196,326 193,333 190,338" />
+        <path d="M 161,300 C 163,303 166,305 169,306" />
+        <path d="M 178,300 C 176,303 174,305 172,306" />
+      </g>
+    </g>
+
+    <!-- 眉間の静かな威厳と知性を宿す陰影 -->
+    <path d="M 169,168 C 169,174 169,179 169,184" fill="none" stroke="#b5714c" stroke-width="1.3" stroke-linecap="round" opacity="0.5" />
+
+    <!-- 縁無し（リムレス）サングラスのレンズ本体 -->
+    <path d="M 84,174 
+             C 95,165 135,165 162,172 
+             C 170,185 162,214 142,229 
+             C 122,243 95,237 84,218 
+             C 76,202 77,184 84,174 Z" fill="url(#lensGrad)" stroke="url(#lensEdgeGrad)" stroke-width="0.9" />
+
+    <path d="M 188,174 
+             C 215,169 255,173 268,184 
+             C 278,196 276,220 262,235 
+             C 246,251 214,249 198,232 
+             C 184,216 182,188 188,174 Z" fill="url(#lensGrad)" stroke="url(#lensEdgeGrad)" stroke-width="0.9" />
+
+    <!-- 濃いレンズ越しに覗く「三白眼ではない、目が大きく目力があり、目つきが鋭い（迫力のある）目元」 -->
+    <g opacity="0.34">
+      <!-- 左眉（目頭側へ鋭く切り込み、目との距離が近い重厚な直線眉） -->
+      <path d="M 92,169 C 113,170 136,174 157,180 C 158,176 157,172 155,170 C 135,166 113,164 91,165 Z" fill="#000000" />
+      <!-- 右眉（目頭側へ鋭く切り込み、目との距離が近い重厚な直線眉） -->
+      <path d="M 192,181 C 214,176 238,174 261,174 C 262,170 260,168 258,168 C 236,168 213,171 192,175 Z" fill="#000000" />
+
+      <!-- 左目（目が大きく、黒目が下まぶたまでしっかり届く非三白眼＋鋭く切り込んだ目頭・上まぶた） -->
+      <!-- 二重の彫りの深いライン -->
+      <path d="M 103,186 C 118,181 137,183 152,190" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" />
+      <!-- 大きな白目ベース -->
+      <path d="M 101,192 C 116,184 137,185 153,194 C 138,202 117,202 101,192 Z" fill="#e6d2c0" />
+      <!-- 大きな黒目（下まぶたのラインまでしっかり接し、上まぶたがわずかに被さることで目力と鋭い目つきを両立） -->
+      <g clip-path="url(#leftEyeClip)">
+        <circle cx="127" cy="193.5" r="7.4" fill="#080808" />
+        <circle cx="124.5" cy="191.5" r="1.3" fill="#ffffff" opacity="0.85" />
+      </g>
+      <!-- 目頭が鋭く切れ込み、目尻へ凛と伸びる太い上まぶたのアイライン -->
+      <path d="M 99,191 C 116,183 137,184 155,195" fill="none" stroke="#000000" stroke-width="3.2" stroke-linecap="round" />
+      <!-- 下まぶたのくっきりした輪郭線 -->
+      <path d="M 102,193 C 117,202 138,202 152,195" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" />
+
+      <!-- 右目（目が大きく、黒目が下まぶたまでしっかり届く非三白眼＋鋭く切り込んだ目頭・上まぶた） -->
+      <!-- 二重の彫りの深いライン -->
+      <path d="M 197,191 C 213,183 233,183 249,189" fill="none" stroke="#000000" stroke-width="1.4" stroke-linecap="round" />
+      <!-- 大きな白目ベース -->
+      <path d="M 196,195 C 213,186 234,186 250,194 C 235,202 213,203 196,195 Z" fill="#e6d2c0" />
+      <!-- 大きな黒目 -->
+      <g clip-path="url(#rightEyeClip)">
+        <circle cx="222" cy="194.5" r="7.4" fill="#080808" />
+        <circle cx="219.5" cy="192.5" r="1.3" fill="#ffffff" opacity="0.85" />
+      </g>
+      <!-- 鋭く切れ込む上まぶたのアイライン -->
+      <path d="M 194,196 C 213,185 234,185 252,194" fill="none" stroke="#000000" stroke-width="3.2" stroke-linecap="round" />
+      <!-- 下まぶたのくっきりした輪郭線 -->
+      <path d="M 197,196 C 213,203 235,202 249,195" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" />
+    </g>
+
+    <!-- 縁無し（ツーポイント）特有のミニマルな固定金具・ブリッジ・テンプル -->
+    <path d="M 159,181 C 169,178 181,179 191,182" fill="none" stroke="url(#hardwareGrad)" stroke-width="2.2" stroke-linecap="round" />
+    <circle cx="158.5" cy="181.2" r="1.3" fill="#ffffff" stroke="#6c727a" stroke-width="0.5" />
+    <circle cx="191.5" cy="182.2" r="1.3" fill="#ffffff" stroke="#6c727a" stroke-width="0.5" />
+
+    <path d="M 271,206 L 295,209" stroke="url(#hardwareGrad)" stroke-width="2.4" stroke-linecap="round" />
+    <circle cx="270.5" cy="206" r="1.3" fill="#ffffff" stroke="#6c727a" stroke-width="0.5" />
+
+    <path d="M 76,192 L 80.5,192" stroke="url(#hardwareGrad)" stroke-width="2.6" stroke-linecap="round" />
+    <circle cx="81" cy="192" r="1.3" fill="#ffffff" stroke="#6c727a" stroke-width="0.5" />
+
+    <!-- 濃いレンズに映えるシャープなガラス反射ハイライト -->
+    <path d="M 92,178 C 108,172 135,172 152,177 C 135,176 112,177 95,184 Z" fill="#ffffff" opacity="0.6" />
+    <path d="M 196,178 C 215,174 242,177 258,185 C 240,181 215,180 198,185 Z" fill="#ffffff" opacity="0.6" />
+    <ellipse cx="106" cy="193" rx="3.5" ry="2" transform="rotate(-20 106 193)" fill="#ffffff" opacity="0.44" />
+    <ellipse cx="204" cy="197" rx="4" ry="2" transform="rotate(-15 204 197)" fill="#ffffff" opacity="0.44" />
   </g>
-
-  <!-- 眉間の深い縦皺（力強さを強調） -->
-  <path d="M 168,166 C 167,172 167,178 168,184" fill="none" stroke="#7d4123" stroke-width="2.1" stroke-linecap="round" opacity="0.9" />
-  <path d="M 181,167 C 182,173 182,179 181,185" fill="none" stroke="#7d4123" stroke-width="2.1" stroke-linecap="round" opacity="0.9" />
-
-  <!-- 濃いティアドロップサングラスのレンズ -->
-  <path d="M 84,174 
-           C 95,165 135,165 162,172 
-           C 170,185 162,214 142,229 
-           C 122,243 95,237 84,218 
-           C 76,202 77,184 84,174 Z" fill="url(#lensGrad)" stroke="url(#frameGrad)" stroke-width="1.8" />
-
-  <path d="M 188,174 
-           C 215,169 255,173 268,184 
-           C 278,196 276,220 262,235 
-           C 246,251 214,249 198,232 
-           C 184,216 182,188 188,174 Z" fill="url(#lensGrad)" stroke="url(#frameGrad)" stroke-width="1.8" />
-
-  <!-- 濃いレンズ越しに強い目力で射抜くゴルゴ13風の鋭い眼光・剛毅な眉 -->
-  <g opacity="0.48">
-    <!-- 左眉（太さと角度を強め、目との距離を詰めて目力を増幅） -->
-    <path d="M 92,172 C 113,174 136,177 158,183 C 159,179 159,175 157,173 C 136,168 113,166 91,167 Z" fill="#000000" />
-    <!-- 右眉 -->
-    <path d="M 191,184 C 214,179 239,177 262,176 C 263,172 262,169 259,169 C 236,170 212,172 191,175 Z" fill="#000000" />
-
-    <!-- 左目（目力を高めた鋭利なアイライン・くっきりした三白眼・鋭い瞳孔ハイライト） -->
-    <path d="M 101,187 C 118,185 136,187 152,191" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" />
-    <path d="M 102,192 C 118,188 136,189 151,194 C 136,198 118,198 102,192 Z" fill="#edd9c7" />
-    <path d="M 99,192 C 118,187 137,189 154,194" fill="none" stroke="#000000" stroke-width="3.2" stroke-linecap="round" />
-    <path d="M 105,194 C 120,198 135,198 149,195" fill="none" stroke="#000000" stroke-width="1.6" stroke-linecap="round" />
-    <!-- 漆黒の黒目と鋭い光の粒 -->
-    <path d="M 120,190 C 124,190 128,190.5 132,191 C 132.5,194.5 129.5,196.8 126,196.8 C 122.5,196.8 119.5,194.5 120,190 Z" fill="#000000" />
-    <circle cx="124" cy="192.2" r="1.2" fill="#ffffff" />
-
-    <!-- 右目（目力を高めた鋭利なアイライン・くっきりした三白眼・鋭い瞳孔ハイライト） -->
-    <path d="M 197,192 C 214,189 233,189 249,192" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" />
-    <path d="M 198,195 C 214,191 233,191 248,196 C 233,200 214,200 198,195 Z" fill="#edd9c7" />
-    <path d="M 195,195 C 214,190 233,191 251,196" fill="none" stroke="#000000" stroke-width="3.2" stroke-linecap="round" />
-    <path d="M 200,197 C 215,200 231,200 245,197" fill="none" stroke="#000000" stroke-width="1.6" stroke-linecap="round" />
-    <!-- 漆黒の黒目と鋭い光の粒 -->
-    <path d="M 216,192 C 220,192 224,192 228,192.5 C 228.5,196 225.5,198.3 222,198.3 C 218.5,198.3 215.5,196 216,192 Z" fill="#000000" />
-    <circle cx="220" cy="194" r="1.2" fill="#ffffff" />
-  </g>
-
-  <!-- 繊細なブリッジとテンプル -->
-  <path d="M 158,171 C 168,169 182,170 192,173" fill="none" stroke="url(#frameGrad)" stroke-width="2.6" stroke-linecap="round" />
-  <path d="M 164,182 C 172,179 180,180 186,183" fill="none" stroke="url(#frameGrad)" stroke-width="1.5" />
-  <path d="M 175,170 L 175,181" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" />
-  <path d="M 274,207 L 295,209" stroke="url(#frameGrad)" stroke-width="2.8" stroke-linecap="round" />
-  <path d="M 76,192 L 81,192" stroke="url(#frameGrad)" stroke-width="3.2" stroke-linecap="round" />
-
-  <!-- 濃いレンズに映えるシャープなガラス反射ハイライト -->
-  <path d="M 92,178 C 108,172 135,172 152,177 C 135,176 112,177 95,184 Z" fill="#ffffff" opacity="0.58" />
-  <path d="M 196,178 C 215,174 242,177 258,185 C 240,181 215,180 198,185 Z" fill="#ffffff" opacity="0.58" />
-  <ellipse cx="106" cy="193" rx="3.5" ry="2" transform="rotate(-20 106 193)" fill="#ffffff" opacity="0.42" />
-  <ellipse cx="204" cy="197" rx="4" ry="2" transform="rotate(-15 204 197)" fill="#ffffff" opacity="0.42" />
 </svg>

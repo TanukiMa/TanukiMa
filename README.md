@@ -61,7 +61,7 @@ My focus is on practical tools and infrastructure that support real-world medica
 - 臨床・事務双方の医療情報ニーズを支援する実務的なツール群
 
 ---
-
+<img src="Matanuki.svg" alt="My portrait" width="40%">
 <!-- SVG self-portrait (now printing) -->
 <!-- 
 <img src="assets/self-portrait.svg" alt="Self portrait" width="180">
